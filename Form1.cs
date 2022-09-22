@@ -25,7 +25,19 @@ namespace StruevCalc
         private void button16_Click(object sender, EventArgs e)
         {
             var a = (Button)sender;
-            textBox1.Text += a.Text;
+            if (a.Text ==",")
+            {
+                if (textBox1.Text.IndexOf(",") == -1)
+                {
+                    textBox1.Text += a.Text;
+                }
+            }
+            else
+            {
+                textBox1.Text += a.Text;
+
+            }
+            
         }
         private void Form1_Load(object sender, EventArgs e)
         {

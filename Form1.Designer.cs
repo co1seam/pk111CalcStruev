@@ -283,13 +283,14 @@ namespace StruevCalc
             // 
             // button22
             // 
-            this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button22.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button22.Location = new System.Drawing.Point(223, 441);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(100, 60);
             this.button22.TabIndex = 23;
             this.button22.Text = ",";
             this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button16_Click);
             // 
             // button24
             // 
