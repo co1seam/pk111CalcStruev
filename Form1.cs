@@ -29,7 +29,7 @@ namespace StruevCalc
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            textBox1.Text = "0";
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -51,6 +51,11 @@ namespace StruevCalc
         {
             string txt = textBox1.Text;
             textBox1.Text = txt.Substring(0, textBox1.Text.Length-1);
+            if (textBox1.Text.Length<1)
+            {
+                textBox1.Text = "0";
+            }
+
         }
     }
 }
