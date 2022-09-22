@@ -1,0 +1,10 @@
+C:\Users\IT\source\repos\StruevCalc\StruevCalc\bin\Debug\StruevCalc.exe.config
+C:\Users\IT\source\repos\StruevCalc\StruevCalc\bin\Debug\StruevCalc.exe
+C:\Users\IT\source\repos\StruevCalc\StruevCalc\bin\Debug\StruevCalc.pdb
+C:\Users\IT\source\repos\StruevCalc\StruevCalc\obj\Debug\StruevCalc.csproj.AssemblyReference.cache
+C:\Users\IT\source\repos\StruevCalc\StruevCalc\obj\Debug\StruevCalc.Form1.resources
+C:\Users\IT\source\repos\StruevCalc\StruevCalc\obj\Debug\StruevCalc.Properties.Resources.resources
+C:\Users\IT\source\repos\StruevCalc\StruevCalc\obj\Debug\StruevCalc.csproj.GenerateResource.cache
+C:\Users\IT\source\repos\StruevCalc\StruevCalc\obj\Debug\StruevCalc.csproj.CoreCompileInputs.cache
+C:\Users\IT\source\repos\StruevCalc\StruevCalc\obj\Debug\StruevCalc.exe
+C:\Users\IT\source\repos\StruevCalc\StruevCalc\obj\Debug\StruevCalc.pdb
