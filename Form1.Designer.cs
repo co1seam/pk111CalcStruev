@@ -129,6 +129,7 @@ namespace StruevCalc
             this.button7.TabIndex = 6;
             this.button7.Text = "CE";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -322,6 +323,7 @@ namespace StruevCalc
             this.button27.TabIndex = 28;
             this.button27.Text = "1/x";
             this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
             // button28
             // 

@@ -69,5 +69,17 @@ namespace StruevCalc
             }
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "0";
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {//расчет обратного числа
+            float x = float.Parse(textBox1.Text);
+            x = 1 / x;
+            textBox1.Text = x.ToString();
+        }
     }
 }
