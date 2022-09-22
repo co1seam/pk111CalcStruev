@@ -42,6 +42,7 @@ namespace StruevCalc
         private void Form1_Load(object sender, EventArgs e)
         {
             textBox1.Text = "0";
+            button6.Text = "X/u00B2";
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -83,6 +84,13 @@ namespace StruevCalc
                 x = 1 / x;
                 textBox1.Text = x.ToString();
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            float x = float.Parse(textBox1.Text);
+            x = x * x;
+            textBox1.Text = x.ToString();
         }
     }
 }
