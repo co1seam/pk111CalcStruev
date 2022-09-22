@@ -78,8 +78,11 @@ namespace StruevCalc
         private void button27_Click(object sender, EventArgs e)
         {//расчет обратного числа
             float x = float.Parse(textBox1.Text);
-            x = 1 / x;
-            textBox1.Text = x.ToString();
+            if (x!=0)
+            {
+                x = 1 / x;
+                textBox1.Text = x.ToString();
+            }
         }
     }
 }
