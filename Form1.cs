@@ -71,7 +71,7 @@ namespace StruevCalc
         }
 
         private void button7_Click(object sender, EventArgs e)
-        {
+        {//стереть все
             textBox1.Text = "0";
         }
 
