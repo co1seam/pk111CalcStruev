@@ -12,6 +12,10 @@ namespace StruevCalc
 {
     public partial class Form1 : Form
     {
+        public double fnum;
+        public double snum;
+        public string deystvie = "";
+        public bool clear = false;
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +27,13 @@ namespace StruevCalc
         }
 
         private void button16_Click(object sender, EventArgs e)
-        {
+        {//переписать по нормальному
+            //кнопки с цифрами
+            if (clear)
+            {
+                textBox1.Clear();
+                clear = false;
+            }
             var a = (Button)sender;
             if (a.Text ==",")
             {
@@ -46,8 +56,10 @@ namespace StruevCalc
         }
 
         private void button13_Click(object sender, EventArgs e)
-        {
-
+        {//делить числа
+            fnum = double.Parse(textBox1.Text);
+            deystvie = "/";
+            clear = true;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -93,7 +105,7 @@ namespace StruevCalc
         }
 
         private void button6_Click(object sender, EventArgs e)
-        {
+        {//квадрат числа
             float x = float.Parse(textBox1.Text);
             x = x * x;
             textBox1.Text = x.ToString();
@@ -117,6 +129,57 @@ namespace StruevCalc
                 x = Math.Sqrt(x);
                 textBox1.Text = x.ToString();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {//сложение чисел
+            fnum = double.Parse(textBox1.Text);
+            deystvie = "+";
+            clear = true;
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {//равно
+            snum = double.Parse(textBox1.Text);
+            double res = 0;
+            switch (deystvie)
+            {
+                case "+":
+                    res = fnum + snum;
+                    break;
+                case "-":
+                    res = fnum - snum;
+                    break;
+                case "*":
+                    res = fnum * snum;
+                    break;
+                case "/":
+                    res = fnum / snum;
+                    break;
+            }
+            textBox1.Text = res.ToString();
+            snum = double.NaN;
+            fnum = double.NaN;
+            deystvie = "";
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {//вычитание чисел
+            fnum = double.Parse(textBox1.Text);
+            deystvie = "-";
+            clear = true;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {//умножить числа
+            fnum = double.Parse(textBox1.Text);
+            deystvie = "*";
+            clear = true;
         }
     }
 }

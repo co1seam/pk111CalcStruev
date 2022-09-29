@@ -69,6 +69,7 @@ namespace StruevCalc
             this.button1.TabIndex = 1;
             this.button1.Text = "MC";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -118,7 +119,7 @@ namespace StruevCalc
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 60);
             this.button6.TabIndex = 7;
-            this.button6.Text = "C";
+            this.button6.Text = "X^2";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -153,6 +154,7 @@ namespace StruevCalc
             this.button9.TabIndex = 16;
             this.button9.Text = "*";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -240,6 +242,7 @@ namespace StruevCalc
             this.button17.TabIndex = 20;
             this.button17.Text = "+";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button18
             // 
@@ -283,6 +286,7 @@ namespace StruevCalc
             this.button21.TabIndex = 24;
             this.button21.Text = "-";
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button22
             // 
@@ -315,6 +319,7 @@ namespace StruevCalc
             this.button25.TabIndex = 30;
             this.button25.Text = "=";
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // button27
             // 
@@ -344,7 +349,7 @@ namespace StruevCalc
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(100, 60);
             this.button29.TabIndex = 26;
-            this.button29.Text = "√";
+            this.button29.Text = "√X";
             this.button29.UseVisualStyleBackColor = true;
             this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
