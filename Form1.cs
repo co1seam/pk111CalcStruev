@@ -98,5 +98,15 @@ namespace StruevCalc
             x = x * x;
             textBox1.Text = x.ToString();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {//смена знака
+            float x = float.Parse(textBox1.Text);
+            if (x != 0)
+            {
+                x *= -1;
+                textBox1.Text = x.ToString();
+            }
+        }
     }
 }
