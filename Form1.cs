@@ -108,5 +108,15 @@ namespace StruevCalc
                 textBox1.Text = x.ToString();
             }
         }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            double x = float.Parse(textBox1.Text);
+            if (x > 0)
+            {//квадратный корень
+                x = Math.Sqrt(x);
+                textBox1.Text = x.ToString();
+            }
+        }
     }
 }

@@ -346,6 +346,7 @@ namespace StruevCalc
             this.button29.TabIndex = 26;
             this.button29.Text = "√";
             this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // button30
             // 
