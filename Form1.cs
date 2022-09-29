@@ -161,11 +161,15 @@ namespace StruevCalc
                 case "/":
                     res = fnum / snum;
                     break;
+                default:
+                    res = double.NaN;
+                    break;
             }
             textBox1.Text = res.ToString();
             snum = double.NaN;
             fnum = double.NaN;
             deystvie = "";
+            clear = true;
         }
 
         private void button21_Click(object sender, EventArgs e)
@@ -176,7 +180,7 @@ namespace StruevCalc
         }
 
         private void button9_Click(object sender, EventArgs e)
-        {//умножить числа
+        {//умножение чисел
             fnum = double.Parse(textBox1.Text);
             deystvie = "*";
             clear = true;
