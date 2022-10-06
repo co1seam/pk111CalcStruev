@@ -16,11 +16,49 @@ namespace StruevCalc
         public double snum;
         public string deystvie = "";
         public bool clear = false;
+        int counter = 0;
         public Form1()
         {
             InitializeComponent();
         }
-
+        public void Deystvie(int _counter, Button button, double _fnum, double _snum)
+        {
+            if (counter == 1)
+            {
+                //fnum = double.Parse(textBox1.Text);
+                string deystvie = button.Text;
+                textBox2.Text = fnum.ToString() + deystvie;//Перенести в другой метод
+            }
+            if (counter > 1)
+            {
+                //snum = double.Parse(textBox1.Text);
+                textBox1.Text = Sum(_fnum, _snum, deystvie).ToString();
+                fnum = Sum(fnum, snum, deystvie);
+            }
+        }
+        public double Sum(double _fnum, double _snum, string _deystvie)
+        {
+            double res;
+            switch (_deystvie)
+            {
+                case "+":
+                    res = _fnum + _snum;
+                    break;
+                case "-":
+                    res = _fnum - _snum;
+                    break;
+                case "*":
+                    res = _fnum * _snum;
+                    break;
+                case "/":
+                    res = _fnum / _snum;
+                    break;
+                default:
+                    res = double.NaN;
+                    break;
+            }
+            return res;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -35,7 +73,7 @@ namespace StruevCalc
                 clear = false;
             }
             var a = (Button)sender;
-            if (a.Text ==",")
+            if (a.Text == ",")
             {
                 if (textBox1.Text.IndexOf(",") == -1)
                 {
@@ -45,9 +83,8 @@ namespace StruevCalc
             else
             {
                 textBox1.Text += a.Text;
-
             }
-            
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -60,6 +97,8 @@ namespace StruevCalc
             fnum = double.Parse(textBox1.Text);
             deystvie = "/";
             clear = true;
+            textBox2.Text = fnum.ToString() + deystvie;
+            counter++;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -70,23 +109,21 @@ namespace StruevCalc
                 x = x.Substring(1, 1);
                 textBox1.Text = x;
             }
-            if(textBox1.Text.Length>24)
+            if (textBox1.Text.Length > 24)
             {
                 string txt = textBox1.Text;
                 textBox1.Text = txt.Substring(0, 24);
-
             }
         }
 
         private void button8_Click(object sender, EventArgs e)
-        {
+        {//
             string txt = textBox1.Text;
-            textBox1.Text = txt.Substring(0, textBox1.Text.Length-1);
-            if (textBox1.Text.Length<1)
+            textBox1.Text = txt.Substring(0, textBox1.Text.Length - 1);
+            if (textBox1.Text.Length < 1)
             {
                 textBox1.Text = "0";
             }
-
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -97,7 +134,7 @@ namespace StruevCalc
         private void button27_Click(object sender, EventArgs e)
         {//расчет обратного числа
             float x = float.Parse(textBox1.Text);
-            if (x!=0)
+            if (x != 0)
             {
                 x = 1 / x;
                 textBox1.Text = x.ToString();
@@ -138,33 +175,35 @@ namespace StruevCalc
 
         private void button17_Click(object sender, EventArgs e)
         {//сложение чисел
-            fnum = double.Parse(textBox1.Text);
-            deystvie = "+";
+            counter++;
             clear = true;
-        }
+            Deystvie(counter, (Button)sender, double.Parse(textBox1.Text), );
+            /*
+            if (counter == 1)
+            {
 
+                fnum = double.Parse(textBox1.Text);
+                deystvie = "+";
+                clear = true;
+                textBox2.Text = fnum.ToString() + deystvie;
+            }
+            if (counter > 1)
+            {
+                snum = double.Parse(textBox1.Text);
+                textBox1.Text = Sum(fnum, snum, deystvie).ToString();
+                fnum = Sum(fnum, snum, deystvie);
+                clear = true;
+
+            }
+            */
+        }
         private void button25_Click(object sender, EventArgs e)
         {//равно
+            counter = 0;
             snum = double.Parse(textBox1.Text);
-            double res = 0;
-            switch (deystvie)
-            {
-                case "+":
-                    res = fnum + snum;
-                    break;
-                case "-":
-                    res = fnum - snum;
-                    break;
-                case "*":
-                    res = fnum * snum;
-                    break;
-                case "/":
-                    res = fnum / snum;
-                    break;
-                default:
-                    res = double.NaN;
-                    break;
-            }
+            double res;
+            res = Sum(fnum, snum, deystvie);
+
             textBox1.Text = res.ToString();
             snum = double.NaN;
             fnum = double.NaN;
@@ -177,6 +216,8 @@ namespace StruevCalc
             fnum = double.Parse(textBox1.Text);
             deystvie = "-";
             clear = true;
+            textBox2.Text = fnum.ToString() + deystvie;
+            counter++;
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -184,6 +225,13 @@ namespace StruevCalc
             fnum = double.Parse(textBox1.Text);
             deystvie = "*";
             clear = true;
+            textBox2.Text = fnum.ToString() + deystvie;
+            counter++;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
